@@ -1,4 +1,4 @@
-import 'package:bloc_cubit/bloc/counter_bloc.dart';
+import 'package:bloc_cubit/cubit/counter_cubit.dart';
 import 'package:bloc_cubit/widgets/buttons_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -21,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             Text("Counter Value"),
             SizedBox(height: 10),
-            BlocBuilder<CounterBloc, CounterState>(
+            BlocBuilder<CounterCubit, CounterState>(
               builder: (context, state) {
                 return Text(
                   "${state.value}",
